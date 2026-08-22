@@ -5,6 +5,7 @@
  */
 
 #include <behaviors.dtsi>
+#include <behaviors/studio_unlock.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 
@@ -66,4 +67,14 @@
                         >;
                 };
         };
+
+        combos {
+    compatible = "zmk,combos";
+
+    studio_unlock_combo {
+        timeout-ms = <50>;
+        key-positions = <1 2>;    // Q + W on the left half
+        bindings = <&studio_unlock>;
+    };
+};
 };
